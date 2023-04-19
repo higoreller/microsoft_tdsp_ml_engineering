@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/874e7ea7c28e4be2a8b796f4641c45ad/artifacts
+end_time: 1681847705847
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: 874e7ea7c28e4be2a8b796f4641c45ad
+run_name: tasteful-trout-510
+run_uuid: 874e7ea7c28e4be2a8b796f4641c45ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681847705833
+status: 3
+tags: []
+user_id: higoreller

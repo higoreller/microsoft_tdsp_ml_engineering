@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/ee27bde6edc3472cb76956aaf1f30a40/artifacts
+end_time: 1681845064226
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: ee27bde6edc3472cb76956aaf1f30a40
+run_name: rebellious-mare-416
+run_uuid: ee27bde6edc3472cb76956aaf1f30a40
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681845064214
+status: 3
+tags: []
+user_id: higoreller

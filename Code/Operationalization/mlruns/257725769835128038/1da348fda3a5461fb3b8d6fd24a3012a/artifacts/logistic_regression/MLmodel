@@ -1,0 +1,14 @@
+artifact_path: logistic_regression
+flavors:
+  python_function:
+    cloudpickle_version: 2.2.1
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.9.16
+mlflow_version: 2.2.2
+model_uuid: 548e8a9caa33425ab78e31adb842820d
+run_id: 1da348fda3a5461fb3b8d6fd24a3012a
+utc_time_created: '2023-04-18 00:46:14.171557'

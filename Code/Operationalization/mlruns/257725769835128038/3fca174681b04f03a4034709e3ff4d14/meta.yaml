@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/3fca174681b04f03a4034709e3ff4d14/artifacts
+end_time: 1681845538157
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: 3fca174681b04f03a4034709e3ff4d14
+run_name: nebulous-shad-517
+run_uuid: 3fca174681b04f03a4034709e3ff4d14
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681845538150
+status: 3
+tags: []
+user_id: higoreller

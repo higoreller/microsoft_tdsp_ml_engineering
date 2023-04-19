@@ -1,0 +1,12 @@
+creation_timestamp: 1681847315345
+current_stage: None
+description: null
+last_updated_timestamp: 1681847315345
+name: logistic_regression_model
+run_id: 796cf0ec36404dc4b977524169900381
+run_link: null
+source: mlflow-artifacts:/0/796cf0ec36404dc4b977524169900381/artifacts/logistic_regression_model
+status: READY
+status_message: null
+user_id: null
+version: 13

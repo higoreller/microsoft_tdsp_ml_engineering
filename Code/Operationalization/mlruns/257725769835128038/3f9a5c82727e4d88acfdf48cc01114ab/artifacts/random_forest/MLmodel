@@ -1,0 +1,14 @@
+artifact_path: random_forest
+flavors:
+  python_function:
+    cloudpickle_version: 2.2.1
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.9.16
+mlflow_version: 2.2.2
+model_uuid: 00c25b8f79d94ff394f8a608fa62f0d6
+run_id: 3f9a5c82727e4d88acfdf48cc01114ab
+utc_time_created: '2023-04-18 19:05:19.469752'

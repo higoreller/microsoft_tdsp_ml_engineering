@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/5ff2006645664ab1a5aa52fb820f6bb2/artifacts
+end_time: 1681864393218
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: 5ff2006645664ab1a5aa52fb820f6bb2
+run_name: Session Initialized 9fa7
+run_uuid: 5ff2006645664ab1a5aa52fb820f6bb2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681864339331
+status: 3
+tags: []
+user_id: higoreller

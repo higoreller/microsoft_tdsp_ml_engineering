@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/06333a5220f8465c9d77e4e34c321d14/artifacts
+end_time: 1681778604581
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: 06333a5220f8465c9d77e4e34c321d14
+run_name: Logistic Regression
+run_uuid: 06333a5220f8465c9d77e4e34c321d14
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681778604386
+status: 3
+tags: []
+user_id: higoreller

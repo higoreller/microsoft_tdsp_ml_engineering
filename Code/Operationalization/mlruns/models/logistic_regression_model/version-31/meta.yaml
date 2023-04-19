@@ -1,0 +1,12 @@
+creation_timestamp: 1681864761491
+current_stage: None
+description: null
+last_updated_timestamp: 1681864761491
+name: logistic_regression_model
+run_id: 728a6a60de6c4ec58872996e7b8d1e1a
+run_link: null
+source: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/728a6a60de6c4ec58872996e7b8d1e1a/artifacts/logistic_regression
+status: READY
+status_message: null
+user_id: null
+version: 31

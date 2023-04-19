@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/c1e7f27162ea4fa09f12d045fbd22e94/artifacts
+end_time: 1681863628235
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: c1e7f27162ea4fa09f12d045fbd22e94
+run_name: Random Forest Classifier
+run_uuid: c1e7f27162ea4fa09f12d045fbd22e94
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681863627580
+status: 3
+tags: []
+user_id: higoreller

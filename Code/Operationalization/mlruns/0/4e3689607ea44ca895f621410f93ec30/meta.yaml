@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4e3689607ea44ca895f621410f93ec30/artifacts
+end_time: 1681848412307
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4e3689607ea44ca895f621410f93ec30
+run_name: skittish-fowl-420
+run_uuid: 4e3689607ea44ca895f621410f93ec30
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681848412282
+status: 3
+tags: []
+user_id: higoreller

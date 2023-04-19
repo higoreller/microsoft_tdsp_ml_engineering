@@ -1,0 +1,15 @@
+artifact_uri: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/ebcbc5b5d5b24b0f8fce80b82c201279/artifacts
+end_time: 1681845225146
+entry_point_name: ''
+experiment_id: '257725769835128038'
+lifecycle_stage: active
+run_id: ebcbc5b5d5b24b0f8fce80b82c201279
+run_name: Random_Forest
+run_uuid: ebcbc5b5d5b24b0f8fce80b82c201279
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681845222976
+status: 3
+tags: []
+user_id: higoreller

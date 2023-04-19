@@ -1,0 +1,12 @@
+creation_timestamp: 1681859835005
+current_stage: None
+description: null
+last_updated_timestamp: 1681859835005
+name: random_forest_model
+run_id: ac93ac64246245caa50d6db31aab25f1
+run_link: null
+source: file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/257725769835128038/ac93ac64246245caa50d6db31aab25f1/artifacts/random_forest
+status: READY
+status_message: null
+user_id: null
+version: 13
