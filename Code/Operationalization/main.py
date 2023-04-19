@@ -8,7 +8,7 @@ def serve_model():
     # If you need to kill process type it on terminal 'fuser -k 1234/tcp'
 
     # Start the MLflow model server obteined from the train step
-    model_uri = "mlruns/257725769835128038/35fa9ff1cfee4534b67e1e9bb6b7e115/artifacts/logistic_regression"
+    model_uri = "mlruns/796054021220512049/9f2045e593cc4fb5bd237120ec56b423/artifacts/logistic_regression"
     subprocess.Popen(["mlflow", "models", "serve", "--model-uri", model_uri, "--no-conda", "-p", "1234"])
 
     try:

@@ -1,6 +1,10 @@
 # Questions
 
-## 2. Diagram
+## 1. Repositório no Github
+
+https://github.com/higoreller/microsoft_tdsp_ml_engineering
+
+## 2. Diagrama
 
 !['Diagram'](./Docs/Project/process_diagram.png)
 
@@ -37,9 +41,17 @@ Random Forest é um método de aprendizado conjunto que pode ser usado para tare
 
 a. O modelo é aderente a essa nova base? Justifique.
 
+Nas previsões utilizando 20% da base de dados filtrados para '2PT Field Goal', o modelo de regressão logística forneceu um valor para o log_loss de 0.716. Posteriormente para a base de dados filtrada para '3PT Field Goal', o modelo deu um log_loss de 0.628. Baseado nos valores de log_loss obtidos, é possível observar uma melhora no desempenho do modelo de regressão logística na nova base de dados. Uma pontuação de log_loss menor indica um modelo mais preciso, já que essa métrica mede o quão bem as probabilidades previstas correspondem às classes verdadeiras.
+
 b. Descreva como podemos monitorar a saúde do modelo no cenário com e sem a disponibilidade da variável resposta para o modelo em operação
 
+Com a variável resposta podemos calcular as métricas acurácia, precisão, recall, F1-score e log_loss para avaliar o desempenho do modelo em comparação com os rótulos verdadeiros. Com a queda desses valores percebemos a degradação do modelo. Sem a variável resposta podemos avaliar as distribuições das variáveis de entrada, pois uma variação brusca na forma dos dados de entrada pode indicar uma mudança na dinâmica do modelo. Além disso, pode-se utilizar métricas alternativas como estabilidade por exemplo.
+
 c. Descreva as estratégias reativa e preditiva de retreinamento para o modelo em operação.
+
+Na abordagem reativa, o modelo é retreinado quando uma degradação no desempenho é observada ou quando ocorre uma mudança significativa nos dados de entrada. Esta abordagem baseia-se na identificação de problemas e na tomada de ações corretivas após a detecção de degradação no desempenho do modelo.
+
+A abordagem preditiva envolve retreinar o modelo em intervalos regulares ou com base em gatilhos específicos, como a adição de uma quantidade significativa de novos dados. Essa estratégia busca prever possíveis degradações no desempenho e antecipar a necessidade de retreinamento antes que ocorram problemas. Pode ser implementada por meio de monitoramento contínuo das métricas de qualidade do modelo e das características dos dados.
 
 ## 9. Implemente um dashboard de monitoramento da operação usando Streamlit.
 

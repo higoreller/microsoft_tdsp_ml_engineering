@@ -1,0 +1,69 @@
+                    Description            Value
+0                    Session id             2629
+1                        Target   shot_made_flag
+2                   Target type           Binary
+3           Original data shape       (16228, 7)
+4        Transformed data shape       (16228, 7)
+5   Transformed train set shape       (11359, 7)
+6    Transformed test set shape        (4869, 7)
+7              Numeric features                6
+8                    Preprocess             True
+9               Imputation type           simple
+10           Numeric imputation             mean
+11       Categorical imputation             mode
+12               Fold Generator  StratifiedKFold
+13                  Fold Number               10
+14                     CPU Jobs               -2
+15                      Use GPU            False
+16               Log Experiment     MlflowLogger
+17              Experiment Name         Training
+18                          USI             aa4c
+Fitting 10 folds for each of 10 candidates, totalling 100 fits
+      Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
+Fold                                                          
+0       0.5766  0.5997  0.4982  0.5637  0.5289  0.1471  0.1480
+1       0.5739  0.5817  0.4613  0.5656  0.5081  0.1391  0.1414
+2       0.5792  0.6165  0.5111  0.5653  0.5368  0.1531  0.1538
+3       0.5704  0.5769  0.4613  0.5605  0.5061  0.1323  0.1343
+4       0.5704  0.5903  0.4889  0.5567  0.5206  0.1344  0.1354
+5       0.5731  0.5940  0.4945  0.5595  0.5250  0.1400  0.1408
+6       0.5748  0.5996  0.4889  0.5626  0.5232  0.1429  0.1441
+7       0.5739  0.5851  0.4788  0.5640  0.5179  0.1408  0.1423
+8       0.5827  0.6065  0.4770  0.5768  0.5222  0.1577  0.1600
+9       0.5736  0.5909  0.4889  0.5614  0.5227  0.1406  0.1417
+Mean    0.5749  0.5941  0.4849  0.5636  0.5212  0.1428  0.1442
+Std     0.0036  0.0113  0.0149  0.0051  0.0086  0.0075  0.0075
+Fitting 10 folds for each of 10 candidates, totalling 100 fits
+      Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
+Fold                                                          
+0       0.5889  0.5757  0.3672  0.6161  0.4601  0.1613  0.1754
+1       0.5792  0.5744  0.3450  0.6032  0.4390  0.1406  0.1547
+2       0.6012  0.5901  0.3819  0.6369  0.4775  0.1865  0.2025
+3       0.5889  0.5818  0.3432  0.6263  0.4434  0.1595  0.1777
+4       0.6012  0.5970  0.3801  0.6378  0.4763  0.1864  0.2027
+5       0.5819  0.5670  0.3561  0.6050  0.4483  0.1466  0.1600
+6       0.5880  0.5791  0.3801  0.6095  0.4682  0.1605  0.1725
+7       0.5995  0.5909  0.3867  0.6325  0.4800  0.1840  0.1988
+8       0.6056  0.5989  0.3831  0.6480  0.4815  0.1959  0.2136
+9       0.5718  0.5669  0.3487  0.5870  0.4375  0.1266  0.1379
+Mean    0.5906  0.5822  0.3672  0.6202  0.4612  0.1648  0.1796
+Std     0.0105  0.0110  0.0165  0.0182  0.0169  0.0217  0.0232
+<ModelVersion: creation_timestamp=1681926608790, current_stage='None', description=None, last_updated_timestamp=1681926608790, name='logistic_regression_model', run_id='05cd2b2f8d3440ae9c31f89d4fae7325', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/05cd2b2f8d3440ae9c31f89d4fae7325/artifacts/logistic_regression', status='READY', status_message=None, tags={}, user_id=None, version=3>
+<ModelVersion: creation_timestamp=1681926610929, current_stage='None', description=None, last_updated_timestamp=1681926610929, name='random_forest_model', run_id='40b1c804d03f427e8e13d55d09d23ec1', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/40b1c804d03f427e8e13d55d09d23ec1/artifacts/random_forest', status='READY', status_message=None, tags={}, user_id=None, version=3>
+New log loss: 0.6284408137475597
+New f1 score: 0.0
+   prediction_label  prediction_score
+0               0.0          0.339862
+1               0.0          0.358818
+2               0.0          0.320997
+3               0.0          0.326916
+4               0.0          0.362269
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://172.21.39.79:8502
+  External URL: http://189.63.5.0:8502
+
