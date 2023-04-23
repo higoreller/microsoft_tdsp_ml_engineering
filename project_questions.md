@@ -56,3 +56,5 @@ A abordagem preditiva envolve retreinar o modelo em intervalos regulares ou com 
 ## 9. Implemente um dashboard de monitoramento da operação usando Streamlit.
 
 Foi implementado nos códigos
+
+!['Streamlit'](./Docs/Deployment/streamlit-monitoring.png)

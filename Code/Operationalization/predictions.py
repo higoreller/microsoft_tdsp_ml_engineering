@@ -4,13 +4,13 @@ import json
 from DataPrep.PreparacaoDados import load_data, preprocess_data
 from sklearn.metrics import log_loss, f1_score
 
-def get_predictions():
+
+def get_predictions(new_data, shot_type):
     # Define API endpoint
     api_url = "http://127.0.0.1:1234/invocations"
 
-    # Load and preprocess new data
-    new_data = load_data('./../../Data/Raw/kobe_dataset.csv')
-    new_data = preprocess_data(new_data, '3PT Field Goal')
+    # Preprocess new data
+    new_data = preprocess_data(new_data, shot_type)
 
     # Remove the 'shot_made_flag' column before sending the data
     new_data_without_label = new_data.drop(columns=['shot_made_flag'])

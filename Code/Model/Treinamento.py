@@ -30,17 +30,16 @@ class LogisticRegressionWrapper(mlflow.pyfunc.PythonModel):
         return np.column_stack((labels, scores))
 
 
-def split_by_shot_type(test_size, shot_type):
-    # Load and preprocess the data
-    kobe_data = load_data('./../../Data/Raw/kobe_dataset.csv')
-    kobe_data = preprocess_data(kobe_data, shot_type)
+def split_by_shot_type(data, test_size, shot_type):
+    # Preprocess the data
+    data = preprocess_data(data, shot_type)
 
     # Save Dataframe to binary
-    kobe_data.to_parquet("./../../Data/Processed/data_filtered.parquet")
+    data.to_parquet("./../../Data/Processed/data_filtered.parquet")
 
     # Split the dataset into features (X) and target (y)
-    X = kobe_data.drop("shot_made_flag", axis=1)
-    y = kobe_data["shot_made_flag"]
+    X = data.drop("shot_made_flag", axis=1)
+    y = data["shot_made_flag"]
 
     # Split the data into training and test sets in a stratified way
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, stratify=y, random_state=42)
@@ -52,27 +51,42 @@ def split_by_shot_type(test_size, shot_type):
     return X_train, X_test, y_train, y_test
 
 
-def train(test_size=0.2, shot_type='2PT Field Goal'):
+def train(data, test_size=0.2, shot_type='2PT Field Goal', progress_bar=None):
     # Split dataset
-    X_train, X_test, y_train, y_test = split_by_shot_type(test_size, shot_type)
+    X_train, X_test, y_train, y_test = split_by_shot_type(data, test_size, shot_type)
 
     # Initialize MLflow
     mlflow.set_experiment("Training")
 
     # Set up PyCaret environment
     clf_setup = setup(data=pd.concat([X_train, y_train], axis=1), n_jobs=-2, fold_shuffle=True, log_experiment=True, target="shot_made_flag", experiment_name='Training')
+    
+    # For streamlit progress bar
+    if progress_bar:
+        progress_bar(0.1)
 
     # Create and tune Logistic Regression model
     lr_model = create_model("lr", cross_validation=True, fold=5, verbose=False)
     lr_tuned = tune_model(lr_model)
     lr_tuned_wrapper = LogisticRegressionWrapper(lr_tuned)
     lr_predicts = predict_model(lr_tuned, data=X_test)
+    lr_log_loss = log_loss(y_test, lr_predicts['prediction_score'])
+
+    # For streamlit progress bar
+    if progress_bar:
+        progress_bar(0.4)
 
     # Create and tune Random Forest model
     rf_model = create_model("rf", cross_validation=True, fold=5, verbose=False)
     rf_tuned = tune_model(rf_model)
     wrapped_rf_tuned = SklearnModelWrapper(rf_tuned)
     rf_predicts = predict_model(rf_tuned, data=X_test)
+    rf_f1_score =  f1_score(y_test, rf_predicts["prediction_label"])
+    rf_log_loss =  log_loss(y_test, rf_predicts['prediction_score'])
+
+    # For streamlit progress bar
+    if progress_bar:
+        progress_bar(0.8)
 
     # Log the models and metrics in MLflow
     # Log LogisticRegression model
@@ -82,7 +96,7 @@ def train(test_size=0.2, shot_type='2PT Field Goal'):
         mlflow.log_metric("train_size", len(X_train))
         mlflow.log_metric("test_size", len(X_test))
         mlflow.pyfunc.log_model("logistic_regression", python_model=lr_tuned_wrapper)
-        mlflow.log_metric("lr_log_loss", log_loss(y_test, lr_predicts['prediction_score']))
+        mlflow.log_metric("lr_log_loss", lr_log_loss)
         model_uri = mlflow.register_model("runs:/{}/logistic_regression".format(mlflow.active_run().info.run_id), "logistic_regression_model")
         print(model_uri)
 
@@ -92,10 +106,16 @@ def train(test_size=0.2, shot_type='2PT Field Goal'):
         mlflow.log_metric("train_size", len(X_train))
         mlflow.log_metric("test_size", len(X_test))
         mlflow.pyfunc.log_model("random_forest", python_model=wrapped_rf_tuned)
-        mlflow.log_metric("f1_score", f1_score(y_test, rf_predicts["prediction_label"]))
-        mlflow.log_metric("rf_log_loss", log_loss(y_test, rf_predicts['prediction_score']))
+        mlflow.log_metric("f1_score", rf_f1_score)
+        mlflow.log_metric("rf_log_loss", rf_log_loss)
         model_uri = mlflow.register_model("runs:/{}/random_forest".format(mlflow.active_run().info.run_id), "random_forest_model")
         print(model_uri)
+
+    # For streamlit progress bar
+    if progress_bar:
+        progress_bar(1)
+
+    return "LR log loss result: {0:.5f}, RF log loss and f1_score results: {1:.5f} e {2:.5f}".format(lr_log_loss, rf_log_loss, rf_f1_score)
 
     
 

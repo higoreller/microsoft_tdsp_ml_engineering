@@ -1,5 +1,5 @@
                     Description            Value
-0                    Session id             2629
+0                    Session id             2179
 1                        Target   shot_made_flag
 2                   Target type           Binary
 3           Original data shape       (16228, 7)
@@ -17,39 +17,40 @@
 15                      Use GPU            False
 16               Log Experiment     MlflowLogger
 17              Experiment Name         Training
-18                          USI             aa4c
+18                          USI             314e
+Fitting 10 folds for each of 10 candidates, totalling 100 fits
+Original model was better than the tuned model, hence it will be returned. NOTE: The display metrics are for the tuned model (not the original one).
+      Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
+Fold                                                          
+0       0.5748  0.6022  0.4862  0.5641  0.5223  0.1430  0.1443
+1       0.5924  0.6256  0.4843  0.5897  0.5319  0.1771  0.1798
+2       0.5907  0.5950  0.4815  0.5865  0.5289  0.1731  0.1758
+3       0.5616  0.5874  0.5037  0.5438  0.5230  0.1186  0.1188
+4       0.5678  0.5870  0.4889  0.5532  0.5191  0.1293  0.1301
+5       0.5907  0.6056  0.4945  0.5839  0.5355  0.1741  0.1760
+6       0.5986  0.6080  0.4926  0.5960  0.5394  0.1893  0.1920
+7       0.5854  0.6054  0.5037  0.5747  0.5369  0.1645  0.1657
+8       0.5669  0.5966  0.4889  0.5521  0.5186  0.1276  0.1284
+9       0.5700  0.6029  0.4815  0.5577  0.5168  0.1333  0.1344
+Mean    0.5799  0.6016  0.4906  0.5702  0.5272  0.1530  0.1545
+Std     0.0124  0.0107  0.0077  0.0174  0.0079  0.0240  0.0248
 Fitting 10 folds for each of 10 candidates, totalling 100 fits
       Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
 Fold                                                          
-0       0.5766  0.5997  0.4982  0.5637  0.5289  0.1471  0.1480
-1       0.5739  0.5817  0.4613  0.5656  0.5081  0.1391  0.1414
-2       0.5792  0.6165  0.5111  0.5653  0.5368  0.1531  0.1538
-3       0.5704  0.5769  0.4613  0.5605  0.5061  0.1323  0.1343
-4       0.5704  0.5903  0.4889  0.5567  0.5206  0.1344  0.1354
-5       0.5731  0.5940  0.4945  0.5595  0.5250  0.1400  0.1408
-6       0.5748  0.5996  0.4889  0.5626  0.5232  0.1429  0.1441
-7       0.5739  0.5851  0.4788  0.5640  0.5179  0.1408  0.1423
-8       0.5827  0.6065  0.4770  0.5768  0.5222  0.1577  0.1600
-9       0.5736  0.5909  0.4889  0.5614  0.5227  0.1406  0.1417
-Mean    0.5749  0.5941  0.4849  0.5636  0.5212  0.1428  0.1442
-Std     0.0036  0.0113  0.0149  0.0051  0.0086  0.0075  0.0075
-Fitting 10 folds for each of 10 candidates, totalling 100 fits
-      Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
-Fold                                                          
-0       0.5889  0.5757  0.3672  0.6161  0.4601  0.1613  0.1754
-1       0.5792  0.5744  0.3450  0.6032  0.4390  0.1406  0.1547
-2       0.6012  0.5901  0.3819  0.6369  0.4775  0.1865  0.2025
-3       0.5889  0.5818  0.3432  0.6263  0.4434  0.1595  0.1777
-4       0.6012  0.5970  0.3801  0.6378  0.4763  0.1864  0.2027
-5       0.5819  0.5670  0.3561  0.6050  0.4483  0.1466  0.1600
-6       0.5880  0.5791  0.3801  0.6095  0.4682  0.1605  0.1725
-7       0.5995  0.5909  0.3867  0.6325  0.4800  0.1840  0.1988
-8       0.6056  0.5989  0.3831  0.6480  0.4815  0.1959  0.2136
-9       0.5718  0.5669  0.3487  0.5870  0.4375  0.1266  0.1379
-Mean    0.5906  0.5822  0.3672  0.6202  0.4612  0.1648  0.1796
-Std     0.0105  0.0110  0.0165  0.0182  0.0169  0.0217  0.0232
-<ModelVersion: creation_timestamp=1681926608790, current_stage='None', description=None, last_updated_timestamp=1681926608790, name='logistic_regression_model', run_id='05cd2b2f8d3440ae9c31f89d4fae7325', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/05cd2b2f8d3440ae9c31f89d4fae7325/artifacts/logistic_regression', status='READY', status_message=None, tags={}, user_id=None, version=3>
-<ModelVersion: creation_timestamp=1681926610929, current_stage='None', description=None, last_updated_timestamp=1681926610929, name='random_forest_model', run_id='40b1c804d03f427e8e13d55d09d23ec1', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/40b1c804d03f427e8e13d55d09d23ec1/artifacts/random_forest', status='READY', status_message=None, tags={}, user_id=None, version=3>
+0       0.6004  0.5937  0.3665  0.6440  0.4671  0.1843  0.2032
+1       0.6065  0.5990  0.3702  0.6569  0.4735  0.1967  0.2174
+2       0.5889  0.5806  0.3413  0.6271  0.4421  0.1593  0.1779
+3       0.5898  0.5795  0.3875  0.6105  0.4740  0.1645  0.1760
+4       0.5898  0.5794  0.3745  0.6152  0.4656  0.1635  0.1768
+5       0.5827  0.5746  0.3432  0.6118  0.4397  0.1474  0.1631
+6       0.5986  0.5887  0.3598  0.6414  0.4610  0.1797  0.1989
+7       0.6136  0.6033  0.3801  0.6667  0.4841  0.2106  0.2320
+8       0.5854  0.5766  0.3616  0.6106  0.4542  0.1539  0.1677
+9       0.5921  0.5805  0.3745  0.6208  0.4672  0.1683  0.1825
+Mean    0.5948  0.5856  0.3659  0.6305  0.4629  0.1728  0.1895
+Std     0.0093  0.0095  0.0142  0.0195  0.0133  0.0188  0.0214
+<ModelVersion: creation_timestamp=1682211807554, current_stage='None', description=None, last_updated_timestamp=1682211807554, name='logistic_regression_model', run_id='dc9db0048f984b6e990a60e10477d954', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/dc9db0048f984b6e990a60e10477d954/artifacts/logistic_regression', status='READY', status_message=None, tags={}, user_id=None, version=56>
+<ModelVersion: creation_timestamp=1682211810123, current_stage='None', description=None, last_updated_timestamp=1682211810123, name='random_forest_model', run_id='d2add7348c96452ab3abb2cb8f984799', run_link=None, source='file:///home/higoreller/Development/pos_ml_engineering/Code/Operationalization/mlruns/796054021220512049/d2add7348c96452ab3abb2cb8f984799/artifacts/random_forest', status='READY', status_message=None, tags={}, user_id=None, version=56>
 New log loss: 0.6284408137475597
 New f1 score: 0.0
    prediction_label  prediction_score
@@ -64,6 +65,6 @@ Collecting usage statistics. To deactivate, set browser.gatherUsageStats to Fals
 
   You can now view your Streamlit app in your browser.
 
-  Network URL: http://172.21.39.79:8502
-  External URL: http://189.63.5.0:8502
+  Network URL: http://172.29.127.194:8523
+  External URL: http://189.63.5.0:8523
 
